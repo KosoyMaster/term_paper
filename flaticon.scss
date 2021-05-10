@@ -1,0 +1,37 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?9d49322dabd7c042c6ede376d9f6e656") format("truetype"),
+url("./flaticon.woff?9d49322dabd7c042c6ede376d9f6e656") format("woff"),
+url("./flaticon.woff2?9d49322dabd7c042c6ede376d9f6e656") format("woff2"),
+url("./flaticon.eot?9d49322dabd7c042c6ede376d9f6e656#iefix") format("embedded-opentype"),
+url("./flaticon.svg?9d49322dabd7c042c6ede376d9f6e656#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    //line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "instagram": "\f101",
+    "vk": "\f102",
+    "behance": "\f103",
+);
+
+.flaticon-instagram:before {
+    content: map-get($flaticon-map, "instagram");
+}
+.flaticon-vk:before {
+    content: map-get($flaticon-map, "vk");
+}
+.flaticon-behance:before {
+    content: map-get($flaticon-map, "behance");
+}
